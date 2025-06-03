@@ -2,10 +2,6 @@
 
 A Random Forest classifier for distinguishing between 'authentic' human-written text and 'synthetic' AI-generated text. This code performs 100 random forest classification runs with different random samples.
 
-## k_fold_author_validation_classifier
-
-
-
 
 ## Requirements
 
@@ -75,7 +71,14 @@ The script generates a CSV file with a random 5-digit suffix: `random_forest_cla
    ```
 5. **Analyze results**: The output CSV contains comprehensive metrics for all runs
 
+# k_fold_author_validation_classifier
 
-## Citation
+A k-fold cross validation classifier that performs validation tests on the general classifier by testing on a single author after training on the remaining authors in the dataset. This code performs 100 random sample classification runs for EACH author in the data set.
 
-When using code or data from this repository, please cite
+# historic_code_data
+
+Code and data from initial classifier testing for the project
+
+# Reports
+
+Write-ups on classification testing process.
