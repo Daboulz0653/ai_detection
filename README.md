@@ -1,5 +1,7 @@
 # AI Style Analysis
 
+[![DOI](https://zenodo.org/badge/995585727.svg)](https://doi.org/10.5281/zenodo.15587211)
+
 Code for the AI Style project at WashU's [AI Humanities Lab](aihumanities.wustl.edu).
 
 
@@ -9,4 +11,21 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Citation
 
-When using code or data from this repository, please cite appropriately.
+If you use this software in your research, please cite it as:
+
+```bibtex
+@software{carroll_kirilloff_ai_style_2025,
+  author = {Carroll, Claudia and Kirilloff, Gabi},
+  title = {AI Style Analysis},
+  url = {https://github.com/ClaudiaECarroll/ai_style},
+  doi = {10.5281/zenodo.15587211},
+  year = {2025},
+  publisher = {Zenodo},
+  version = {1.0.0}
+}
+```
+
+Or in text format:
+> Carroll, C., & Kirilloff, G. (2025). AI Style Analysis (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.15587211
+
+

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Carroll"
+    given-names: "Claudia"
+    orcid: "https://orcid.org/0000-0002-1853-9106"
+    affiliation: "Washington University in St. Louis, AI Humanities Lab"
+  - family-names: "Kirilloff"
+    given-names: "Gabi"
+    orcid: "https://orcid.org/0000-0003-2696-1419"
+    affiliation: "Washington University in St. Louis, AI Humanities Lab"
+title: "AI Style Analysis"
+version: 1.0.0
+doi: 10.5281/zenodo.15587211
+date-released: 2025-06-03
+url: "https://github.com/ClaudiaECarroll/ai_style"
+repository-code: "https://github.com/ClaudiaECarroll/ai_style"
+abstract: "A Random Forest classifier for distinguishing between authentic human-written text and synthetic AI-generated text."
+keywords:
+  - "machine learning"
+  - "text classification"
+  - "AI detection"
+  - "natural language processing"
+  - "random forest"
+license: MIT
