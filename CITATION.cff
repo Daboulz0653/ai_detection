@@ -16,10 +16,5 @@ date-released: 2025-06-03
 url: "https://github.com/ClaudiaECarroll/ai_style"
 repository-code: "https://github.com/ClaudiaECarroll/ai_style"
 abstract: "A Random Forest classifier for distinguishing between authentic human-written text and synthetic AI-generated text."
-keywords:
-  - "machine learning"
-  - "text classification"
-  - "AI detection"
-  - "natural language processing"
-  - "random forest"
+
 license: MIT
