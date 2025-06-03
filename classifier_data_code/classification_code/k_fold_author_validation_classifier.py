@@ -10,19 +10,31 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support
 import random
+from datetime import datetime
 
-input_file = "data/master_feature_matrix.csv"
+# Configuration
+CONFIG = {
+    'text_model': 'gpt4',
+    'n_runs': 100,
+    'sample_size_per_category': 100,
+    'test_size': 0.2,
+    'random_state': 42,
+    'n_estimators': 100,
+    'data_path': "data/master_feature_matrix.csv",
+    'output_dir': "data/"
+}
 
-original_df = pd.read_csv(input_file)
+# specify which subset of synthetic text we want to test the classifier on by model (e.g. gpt4, gpt3.5, etc.)
 
-df = original_df[original_df["model"] != "gpt3.5"]
+original_df = pd.read_csv(CONFIG['data_path'])
+
+df = original_df[(original_df["model"] == CONFIG['text_model']) | (original_df["model"] == "authentic")]
 
 # Variables
 
-output_file = "data/gpt4_author_holdout_test.csv"
+output_file = f"{CONFIG['output_dir']}k_fold_author_validation_data.csv"
 
-authors = ['alcott', 'austen', 'bronte', 'chesnutt', 'dickens', 'gaskell',
-       'griggs', 'hopkins', 'stoker', 'twain']
+authors = df['author'].unique().tolist()
 
 feature_cols = ['mean_sen_len', 'sentiment',
        'male_pronouns', 'female_pronouns', 'TTR', 'lex_density',
@@ -92,6 +104,12 @@ for author in authors:
 
         test_df = pd.concat(test_sampled_rows).reset_index(drop=True)
 
+        # Combine train and test to get all sample IDs
+        all_samples_df = pd.concat([train_df, test_df]).reset_index(drop=True)
+        all_sample_ids = all_samples_df['id'].tolist()
+        train_ids = train_df['id'].tolist()
+        test_ids = test_df['id'].tolist()
+
 
         # Feature and target extraction
         X_train = train_df[feature_cols]
@@ -105,7 +123,7 @@ for author in authors:
         print(f"Training model for test {i} for {author}")
 
         # Initialize the Random Forest model
-        model = RandomForestClassifier(n_estimators=100, random_state=42)
+        model = RandomForestClassifier(n_estimators=CONFIG['n_estimators'], random_state=CONFIG['random_state'])
         
         # Train the model
         model.fit(X_train, y_train)
@@ -159,9 +177,9 @@ for author in authors:
 
         # Printing results to csv
         
-        author_holdout_test = pd.DataFrame(columns=['test_author', 
-                                            'train_samples', 
-                                            'test_samples',
+        author_holdout_test = pd.DataFrame(columns=['run_date',
+                                            'test_author', 
+                                            'features_used',
                                             'accuracy',
                                             
                                             'Overall F1', 
@@ -179,28 +197,34 @@ for author in authors:
                                             
                                             'authentic_mislabeled', 
                                             'synthetic_mislabeled', 
-                                            'top_10_features'])
+                                            'top_10_features',
+                                            'all_sample_ids',
+                                            'train_ids',
+                                            'test_ids'])
         
+        author_holdout_test.at[0, 'run_date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         author_holdout_test.at[0, 'test_author'] = author
-        author_holdout_test.at[0, 'train_samples'] = train_df['id'].tolist()
-        author_holdout_test.at[0, 'test_samples'] = test_df['id'].tolist()
+        author_holdout_test.at[0, 'features_used'] = feature_cols
         author_holdout_test.at[0, 'accuracy'] = accuracy
         
         author_holdout_test.at[0, 'Overall F1'] = overall_f1
         author_holdout_test.at[0, 'Overall Precision'] = overall_precision
         author_holdout_test.at[0, 'Overall Recall'] = overall_recall
         
-        author_holdout_test.at[0, 'Authentic F1'] = f1[0]
-        author_holdout_test.at[0, 'Authentic Precision'] = precision[0]
-        author_holdout_test.at[0, 'Authentic Recall'] = recall[0]
+        author_holdout_test.at[0, 'Authentic F1'] = round(f1[0], 5)
+        author_holdout_test.at[0, 'Authentic Precision'] = round(precision[0], 5)
+        author_holdout_test.at[0, 'Authentic Recall'] = round(recall[0], 5)
         
-        author_holdout_test.at[0, 'Synthetic F1'] = f1[1]
-        author_holdout_test.at[0, 'Synthetic Precision'] = precision[1]
-        author_holdout_test.at[0, 'Synthetic Recall'] = recall[1]
+        author_holdout_test.at[0, 'Synthetic F1'] = round(f1[1], 5)
+        author_holdout_test.at[0, 'Synthetic Precision'] = round(precision[1], 5)
+        author_holdout_test.at[0, 'Synthetic Recall'] = round(recall[1], 5)
         
         author_holdout_test.at[0, 'authentic_mislabeled'] = authentic_mislabeled
         author_holdout_test.at[0, 'synthetic_mislabeled'] = synthetic_mislabeled
         author_holdout_test.at[0, 'top_10_features'] = top_10_features
+        author_holdout_test.at[0, 'all_sample_ids'] = all_sample_ids
+        author_holdout_test.at[0, 'train_ids'] = train_ids
+        author_holdout_test.at[0, 'test_ids'] = test_ids
         
         
         if os.path.exists(output_file):

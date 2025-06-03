@@ -2,6 +2,10 @@
 
 A Random Forest classifier for distinguishing between 'authentic' human-written text and 'synthetic' AI-generated text. This code performs 100 random forest classification runs with different random samples.
 
+## k_fold_author_validation_classifier
+
+
+
 
 ## Requirements
 
