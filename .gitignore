@@ -1,2 +1,5 @@
 classifier_data_code/data/razi_chunks.csv
 classifier_data_code/data/master_feature_matrix.csv
+
+# Hide feature data code from GitHub while keeping local tracking
+feature_data_code/
