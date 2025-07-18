@@ -6,7 +6,7 @@ Code for the AI Style project at WashU's [AI Humanities Lab](aihumanities.wustl.
 
 ## classifier_data_code
 
-This folder contains the code to run classification experiment to distinguish between authentic and synthetic text using a random forest classifier.
+This folder contains the code to run classification experiments to distinguish between authentic and synthetic text using a random forest classifier.
 
 
 
