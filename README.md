@@ -2,6 +2,18 @@
 
 Data and code repository for reproducing the experiments from the AI Style project (WashU AI Humanities Lab). DOI: https://doi.org/10.5281/zenodo.15587211
 
+## Citation
+This repository contains code and data that accompany the article:
+
+Kirilloff, G., Carroll, C., Daboul, Z., Frank, A., Khan, R., Hinrichs-Morrow, M., & Weingart, R. (2025). "'Written in the Style of': ChatGPT and the Literary Canon." Harvard Data Science Review (HDSR). Published Aug 05, 2025. Available: https://doi.org/10.1162/99608f92.6d5fb5ef
+
+If you use the repository code or data, cite this repository; if you use the article or its findings, cite the HDSR article. Example citations:
+
+- For the article:
+  Kirilloff, G., et al. (2025). 'Written in the Style of': ChatGPT and the Literary Canon. Harvard Data Science Review. https://doi.org/10.1162/99608f92.6d5fb5ef
+- For the software (this repository):
+  Carroll, C., & Kirilloff, G. (2025). AI Style Analysis (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.15587211
+
 ## What this repo contains
 
 - `classifier_data_code/` — scripts and notebooks used to generate feature matrices and run classification experiments to distinguish authentic (human) and synthetic text. Key scripts:
