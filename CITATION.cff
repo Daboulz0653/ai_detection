@@ -7,6 +7,8 @@ url: "https://github.com/ClaudiaECarroll/ai_style"
 repository-code: "https://github.com/ClaudiaECarroll/ai_style"
 abstract: "Code and data accompanying the article 'Written in the Style of': ChatGPT and the Literary Canon (Kirilloff et al., 2025)."
 
+This repository corresponds to the version archived at https://doi.org/10.7910/DVN/BRK6JL for the publication Harvard Data Science Review (HDSR), 2025.
+
 authors:
   - family-names: "Carroll"
     given-names: "Claudia"
@@ -31,4 +33,4 @@ related-identifiers:
   - type: article
     relation: IsSupplementTo
     description: "Kirilloff, G., Carroll, C., Daboul, Z., Frank, A., Khan, R., Hinrichs-Morrow, M., & Weingart, R. (2025). 'Written in the Style of': ChatGPT and the Literary Canon. Harvard Data Science Review (HDSR)."
-    url: "https://hdsr.mitpress.mit.edu/pub/pyo0xs3k/release/1"
+    url: "https://doi.org/10.1162/99608f92.6d5fb5ef"

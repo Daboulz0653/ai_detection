@@ -1,4 +1,5 @@
-API_prompt_code
+# API_prompt_code
+
 This folder contains the code necessary to generate synthetic fiction paragraphs from the OpenAI API. 
 
 ## Usage
@@ -21,6 +22,8 @@ The program takes in a sheet with a singular column filled with the prompts that
 ### Program Outputs
 
 Output: The program first parses the sheet and extract all prompts, placing them into a list. It then iterates over the list, repeatedly prompting chatGPT and placing the original prompt and the text response in a separate sheet called **{your sheet}_responses.csv**, with timestamps and mode (API or CHAT).
+
+Note: the data we generated using the API code and analyzed for our paper (https://doi.org/10.1162/99608f92.6d5fb5ef) is contained in the whole_corpus.csv file. If this API code is used to regenerate the synthetic text corpus, note that the outputs will vary as GPT is a probabalistic model.
 
 
 
