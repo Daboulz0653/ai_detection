@@ -1,20 +1,34 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-authors:
-  - family-names: "Carroll"
-    given-names: "Claudia"
-    orcid: "https://orcid.org/0000-0002-1853-9106"
-    affiliation: "Washington University in St. Louis, AI Humanities Lab"
-  - family-names: "Kirilloff"
-    given-names: "Gabi"
-    orcid: "https://orcid.org/0000-0003-2696-1419"
-    affiliation: "Washington University in St. Louis, AI Humanities Lab"
-title: "AI Style Analysis"
+message: "If you use this software, please cite the software and associated article as indicated."
+title: "AI Style Analysis (code and data accompanying Kirilloff et al., 2025)"
 version: 1.0.0
-doi: 10.5281/zenodo.15587211
 date-released: 2025-06-03
 url: "https://github.com/ClaudiaECarroll/ai_style"
 repository-code: "https://github.com/ClaudiaECarroll/ai_style"
-abstract: "A Random Forest classifier for distinguishing between authentic human-written text and synthetic AI-generated text."
+abstract: "Code and data accompanying the article 'Written in the Style of': ChatGPT and the Literary Canon (Kirilloff et al., 2025)."
+
+authors:
+  - family-names: "Carroll"
+    given-names: "Claudia"
+    affiliation: "Washington University in St. Louis"
+  - family-names: "Kirilloff"
+    given-names: "Gabi"
+    affiliation: "Washington University in St. Louis"
+  - family-names: "Daboul"
+    given-names: "Zeina"
+  - family-names: "Frank"
+    given-names: "Arianwyn"
+  - family-names: "Khan"
+    given-names: "Razi"
+  - family-names: "Hinrichs-Morrow"
+    given-names: "Marielle"
+  - family-names: "Weingart"
+    given-names: "Rebecca"
 
 license: MIT
+
+related-identifiers:
+  - type: article
+    relation: IsSupplementTo
+    description: "Kirilloff, G., Carroll, C., Daboul, Z., Frank, A., Khan, R., Hinrichs-Morrow, M., & Weingart, R. (2025). 'Written in the Style of': ChatGPT and the Literary Canon. Harvard Data Science Review (HDSR)."
+    url: "https://hdsr.mitpress.mit.edu/pub/pyo0xs3k/release/1"
