@@ -1,0 +1,91 @@
+M4 HDSR_train: 
+Mean accuracy for random forest: 0.5272784610532955
+Min accuracy for random forest: 0.4047619047619047
+Max accuracy for random forest: 0.6428571428571429
+Standard deviation: 0.039123052219775294
+
+Top 3 features: PRP, of, NN 
+
+
+RAID HDSR_train
+
+Mean accuracy for random forest: 0.4863861386138614
+Min accuracy for random forest: 0.4166666666666667
+Max accuracy for random forest: 0.5642361111111112
+Standard deviation: 0.030165131817141668
+
+Top 3 features: PRP, of, NN
+
+
+GPA2Bench HDSR_train
+
+weird
+Mean accuracy for random forest: 0.84472
+Min accuracy for random forest: 0.8213333333333334
+Max accuracy for random forest: 0.868
+Standard deviation: 0.010137408360147157 
+
+Top 3 features: PRP, of, NN
+
+
+MAGE HDSR_train
+
+also weird 
+Mean accuracy for random forest: 0.22250776397515523
+Min accuracy for random forest: 0.1677018633540372
+Max accuracy for random forest: 0.2732919254658385
+Standard deviation: 0.02086051838725057
+
+Top 3 features: PRP, of, NN
+
+
+-------------------------------------------------------------
+
+MAGE 
+
+Mean accuracy for random forest: 0.8423837637684356
+Min accuracy for random forest: 0.7935323383084577
+Max accuracy for random forest: 0.9758620689655172
+Standard deviation: 0.06450018445611937
+
+Top 3 features: TTR, the, DT
+
+
+GPA2Bench
+
+unexpected, is something wrong, or only gpt3 set
+Mean accuracy for random forest: 0.9798833333333333
+Min accuracy for random forest: 0.9694444444444444
+Max accuracy for random forest: 0.9877777777777778
+Standard deviation: 0.003295988901037901
+
+Top 3 features: Sentiment, VBG, is
+
+
+RAID
+
+Mean accuracy for random forest: 0.8114481707317073
+Min accuracy for random forest: 0.7682926829268293
+Max accuracy for random forest: 0.850609756097561
+Standard deviation: 0.016171423540456677
+
+Top 3 features: Sentiment, TTR, mean_sen_len
+
+
+M4
+
+Mean accuracy for random forest: 0.8504166666666667
+Min accuracy for random forest: 0.8154761904761905
+Max accuracy for random forest: 0.8869047619047619
+Standard deviation: 0.014827567692042411
+
+Top 3 features: Sentiment, TTR, in
+
+
+
+
+
+
+
+
+
