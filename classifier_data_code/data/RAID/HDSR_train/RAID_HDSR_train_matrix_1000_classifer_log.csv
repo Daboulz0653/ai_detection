@@ -1,0 +1,1 @@
+user,date,id,sample_size,training_size,test_size,training_data,testing_data,training_models,testing_models,training_domains,testing_domains,accuracy,overall_f1,overall_precision,overall_recall,authentic_f1,authentic_precision,authentic_recall,synthetic_f1,synthetic_precision,synthetic_recall,authentic_mislabeled,synthetic_mislabeled,top_10_features
